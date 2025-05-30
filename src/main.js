@@ -47,14 +47,19 @@ async function onSearch(event) {
         message: 'No images found. Try another search term.',
         position: 'topRight',
       });
-      return;
-    }
-
-    createGallery(data.hits);
-    totalPages = Math.ceil(data.totalHits / 15);
-
-    if (page < totalPages) {
+    
+    } else {
+      createGallery(data.hits);
+      totalPages = Math.ceil(data.totalHits / 15);
+      if (page < totalPages) {
       showLoadMoreButton();
+    }else {
+        hideLoadMoreButton(); // ← важливо!
+      }
+
+    
+
+    
     }
 
   } catch (error) {
