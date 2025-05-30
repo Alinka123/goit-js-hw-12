@@ -12,15 +12,17 @@ const lightbox = new SimpleLightbox('.gallery a', {
 
 function imageTemplate({ largeImageURL, webformatURL, tags, likes, views, comments, downloads }) {
   return `
-   <a class="gallery-item" href="${largeImageURL}">
-      <img src="${webformatURL}" alt="${tags}" loading="lazy" />
-      <div class="image-info">
-        <p><b>Likes:</b> ${likes}</p>
-        <p><b>Views:</b> ${views}</p>
-        <p><b>Comments:</b> ${comments}</p>
-        <p><b>Downloads:</b> ${downloads}</p>
-      </div>
-    </a>
+  <li class="gallery-item">
+      <a class="gallery-link" href="${largeImageURL}">
+        <img src="${webformatURL}" alt="${tags}" loading="lazy" />
+        <div class="image-info">
+          <p><b>Likes:</b> ${likes}</p>
+          <p><b>Views:</b> ${views}</p>
+          <p><b>Comments:</b> ${comments}</p>
+          <p><b>Downloads:</b> ${downloads}</p>
+        </div>
+      </a>
+    </li>
   `;
 }
 
