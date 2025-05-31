@@ -1,6 +1,6 @@
-.load1 .loader,
-.load1 .loader:before,
-.load1 .loader:after {
+ .loader,
+.loader:before,
+.loader:after {
     background: #ffffff;
     -webkit-animation: load1 1s infinite ease-in-out;
     animation: load1 1s infinite ease-in-out;
@@ -8,7 +8,7 @@
     height: 4em;
 }
 
-.load1 .loader {
+.loader {
     color: #ffffff;
     text-indent: -9999em;
     margin: 88px auto;
@@ -21,20 +21,20 @@
     animation-delay: -0.16s;
 }
 
-.load1 .loader:before,
-.load1 .loader:after {
+.loader:before,
+.loader:after {
     position: absolute;
     top: 0;
     content: '';
 }
 
-.load1 .loader:before {
+.loader:before {
     left: -1.5em;
     -webkit-animation-delay: -0.32s;
     animation-delay: -0.32s;
 }
 
-.load1 .loader:after {
+.loader:after {
     left: 1.5em;
 }
 
